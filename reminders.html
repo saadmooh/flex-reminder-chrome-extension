@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="reminders"></title>
+  <!-- Tailwind CSS CDN -->
+  <link href="vendor/tailwind.min.css" rel="stylesheet">
+   <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Custom styles for message bar animation */
+    #message-bar {
+      transition: opacity 0.5s ease-in-out;
+    }
+    #message-bar.hidden {
+      opacity: 0;
+    }
+    /* Ensure sidebar transition */
+    .sidebar {
+      transition: transform 0.3s ease-in-out;
+    }
+    .sidebar.open {
+      transform: translateX(0);
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-gray-100 text-xl">
+  <div id="reminders-screen" class="screen p-6 relative">
+    <div id="message-bar" class="fixed top-0 left-0 right-0 p-4 text-white text-center hidden z-50"></div>
+    <!-- Header with title and settings button -->
+    <div class="flex justify-between items-center mb-4">
+      <h2 class="text-2xl font-bold text-black" data-i18n="reminders"></h2>
+      <!-- Settings Button -->
+      <button id="settings-btn" class="p-2 bg-black text-white rounded-lg hover:bg-gray-800 transition z-20" aria-label="Settings">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.573-1.066z" />
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+        </svg>
+      </button>
+    </div>
+    <!-- Sidebar -->
+    <div id="sidebar" class="sidebar hidden fixed top-0 right-0 h-full w-64 bg-white shadow-lg z-10 p-4 transform translate-x-full">
+      <h3 class="text-xl font-bold text-black mb-4" data-i18n="settings"></h3>
+      <div class="flex flex-col space-y-2">
+        <button id="add-bookmark-btn" class="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition" data-i18n="addCurrentPage"></button>
+        <button id="free-times-btn" class="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition" data-i18n="freeTimes"></button>
+        <button id="subscriptions-btn" class="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition" data-i18n="manageSubscriptions"></button>
+        <button id="language-btn" class="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition" data-i18n="changeLanguage"></button>
+        <button id="logout-btn" class="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition" data-i18n="logout"></button>
+      </div>
+    </div>
+    <input type="text" id="search" class="w-full p-3 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:ring-2 focus:ring-black" data-i18n-placeholder="searchReminders">
+    <div class="filters flex space-x-2 mb-4">
+      <select id="category-filter" class="p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-black">
+        <option value="" data-i18n="allCategories"></option>
+      </select>
+      <select id="complexity-filter" class="p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-black">
+        <option value="" data-i18n="allComplexities"></option>
+      </select>
+      <select id="domain-filter" class="p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-black">
+        <option value="" data-i18n="allDomains"></option>
+      </select>
+    </div>
+    <!-- Tabs -->
+    <div class="tabs flex space-x-2 border-b border-gray-300 mb-8">
+      <button id="unread-tab" class="px-4 py-2 rounded-xl bg-black text-white focus:outline-none hover:bg-gray-800 transition tab-active" data-i18n="unreadTab"></button>
+      <button id="read-tab" class="px-4 py-2 rounded-xl bg-gray-300 text-gray-600 focus:outline-none hover:bg-gray-400 transition" data-i18n="readTab"></button>
+    </div>
+    <!-- Reminders Lists -->
+    <div id="unread-reminders-container">
+      <ul id="unread-reminders-list" class="space-y-2 max-h-96 overflow-y-auto"></ul>
+      
+    </div>
+    <div id="read-reminders-container" class="hidden">
+      <ul id="read-reminders-list" class="space-y-2 max-h-96 overflow-y-auto"></ul>
+     
+    </div>
+  </div>
+  <script src="i18n.js"></script>
+  <script src="utils.js"></script>
+  <script src="reminders.js"></script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+% Setting up the document class and basic configurations
+\documentclass[12pt]{article}
+
+% Including necessary packages for layout, language support, and formatting
+\usepackage[a4paper, margin=1in]{geometry}
+\usepackage{setspace}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+
+% Configuring language support with polyglossia for Arabic and English
+\usepackage{polyglossia}
+\setdefaultlanguage{english}
+\setotherlanguage{arabic}
+
+% Setting up fonts for Arabic and English
+\usepackage{fontspec}
+\newfontfamily\arabicfont[Script=Arabic, Scale=1.2]{Amiri}
+\newfontfamily\englishfont{Latin Modern Roman}
+
+% Adjusting section titles format
+\titleformat{\section}{\Large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\large\bfseries}{\thesubsection}{1em}{}
+
+% Setting line spacing
+\onehalfspacing
+
+% Beginning the document
+\begin{document}
+
+% Title page for Privacy Policy
+\begin{center}
+    {\LARGE\bfseries Privacy Policy for FlexReminder Extension}\\[\baselineskip]
+    {\large Last Updated: May 04, 2025}\\[\baselineskip]
+    {\large\bfseries سياسة الخصوصية لإضافة FlexReminder}\\[\baselineskip]
+    {\large آخر تحديث: ٤ مايو ٢٠٢٥}
+\end{center}
+
+% Introduction section in English
+\section{Introduction}
+This Privacy Policy explains how the FlexReminder Extension ("we," "us," or "our") collects, uses, shares, and protects your information when you use our browser extension. We are committed to safeguarding your privacy and ensuring that your personal information is handled responsibly.
+
+% Introduction section in Arabic
+\section*{\textarabic{مقدمة}}
+\textarabic{توضح سياسة الخصوصية هذه كيفية جمع إضافة FlexReminder ("نحن" أو "لنا") لمعلوماتك واستخدامها ومشاركتها وحمايتها عند استخدامك لإضافتنا على المتصفح. نحن ملتزمون بحماية خصوصيتك وضمان التعامل مع معلوماتك الشخصية بمسؤولية.}
+
+% Information We Collect section in English
+\section{Information We Collect}
+We may collect the following types of information when you use the FlexReminder Extension:
+\begin{itemize}
+    \item \textbf{Personal Information}: Your email address and user ID when you register or log in to the extension.
+    \item \textbf{Usage Data}: Information about the URLs you save as reminders, reminder times, and your interaction with the extension (e.g., clicks, opened reminders).
+    \item \textbf{Technical Data}: Your browser type, IP address, and device information to ensure the extension functions properly.
+    \item \textbf{Preferences}: Your language preference (English or Arabic) and timezone settings.
+\end{itemize}
+
+% Information We Collect section in Arabic
+\section*{\textarabic{المعلومات التي نجمعها}}
+\textarabic{قد نجمع الأنواع التالية من المعلومات عند استخدامك لإضافة FlexReminder:}
+\begin{itemize}[label=\textarabic{•}]
+    \item \textarabic{\textbf{المعلومات الشخصية}: عنوان بريدك الإلكتروني ومعرف المستخدم عند التسجيل أو تسجيل الدخول إلى الإضافة.}
+    \item \textarabic{\textbf{بيانات الاستخدام}: معلومات حول عناوين URL التي تحفظها كتذكيرات، وأوقات التذكير، وتفاعلك مع الإضافة (مثل النقرات، التذكيرات التي تم فتحها).}
+    \item \textarabic{\textbf{البيانات التقنية}: نوع المتصفح الخاص بك، عنوان IP، ومعلومات الجهاز لضمان عمل الإضافة بشكل صحيح.}
+    \item \textarabic{\textbf{التفضيلات}: تفضيلات اللغة الخاصة بك (الإنجليزية أو العربية) وإعدادات المنطقة الزمنية.}
+\end{itemize}
+
+% How We Use Your Information section in English
+\section{How We Use Your Information}
+We use the collected information for the following purposes:
+\begin{itemize}
+    \item To provide and improve the functionality of the FlexReminder Extension, such as scheduling reminders and categorizing URLs.
+    \item To personalize your experience, including language and timezone settings.
+    \item To analyze usage patterns and improve our services.
+    \item To communicate with you, such as sending notifications for reminders.
+\end{itemize}
+
+% How We Use Your Information section in Arabic
+\section*{\textarabic{كيف نستخدم معلوماتك}}
+\textarabic{نستخدم المعلومات التي نجمعها للأغراض التالية:}
+\begin{itemize}[label=\textarabic{•}]
+    \item \textarabic{لتوفير وتحسين وظائف إضافة FlexReminder، مثل جدولة التذكيرات وتصنيف عناوين URL.}
+    \item \textarabic{لتخصيص تجربتك، بما في ذلك إعدادات اللغة والمنطقة الزمنية.}
+    \item \textarabic{لتحليل أنماط الاستخدام وتحسين خدماتنا.}
+    \item \textarabic{للتواصل معك، مثل إرسال إشعارات للتذكيرات.}
+\end{itemize}
+
+% Sharing Your Information section in English
+\section{Sharing Your Information}
+We do not sell or share your personal information with third parties, except in the following cases:
+\begin{itemize}
+    \item With service providers who assist us in operating the extension (e.g., hosting services), under strict confidentiality agreements.
+    \item If required by law or to protect our rights, safety, or property.
+\end{itemize}
+
+% Sharing Your Information section in Arabic
+\section*{\textarabic{مشاركة معلوماتك}}
+\textarabic{لا نبيع أو نشارك معلوماتك الشخصية مع أطراف ثالثة، باستثناء الحالات التالية:}
+\begin{itemize}[label=\textarabic{•}]
+    \item \textarabic{مع مزودي الخدمات الذين يساعدوننا في تشغيل الإضافة (مثل خدمات الاستضافة)، بموجب اتفاقيات سرية صارمة.}
+    \item \textarabic{إذا تطلب الأمر بموجب القانون أو لحماية حقوقنا أو سلامتنا أو ممتلكاتنا.}
+\end{itemize}
+
+% Data Security section in English
+\section{Data Security}
+We implement reasonable security measures to protect your information from unauthorized access, alteration, or disclosure. However, no method of transmission over the internet or electronic storage is 100\% secure, and we cannot guarantee absolute security.
+
+% Data Security section in Arabic
+\section*{\textarabic{أمان البيانات}}
+\textarabic{ننفذ تدابير أمان معقولة لحماية معلوماتك من الوصول غير المصرح به أو التغيير أو الكشف. ومع ذلك، لا توجد طريقة نقل عبر الإنترنت أو تخزين إلكتروني آمنة بنسبة 100\%، ولا يمكننا ضمان الأمان المطلق.}
+
+% Your Rights section in English
+\section{Your Rights}
+You have the following rights regarding your personal information:
+\begin{itemize}
+    \item \textbf{Access}: You can request access to the personal information we hold about you.
+    \item \textbf{Deletion}: You can request the deletion of your personal information by contacting us.
+    \item \textbf{Update}: You can update your preferences, such as language or timezone, through the extension settings.
+\end{itemize}
+
+% Your Rights section in Arabic
+\section*{\textarabic{حقوقك}}
+\textarabic{لديك الحقوق التالية فيما يتعلق بمعلوماتك الشخصية:}
+\begin{itemize}[label=\textarabic{•}]
+    \item \textarabic{\textbf{الوصول}: يمكنك طلب الوصول إلى المعلومات الشخصية التي نحتفظ بها عنك.}
+    \item \textarabic{\textbf{الحذف}: يمكنك طلب حذف معلوماتك الشخصية عن طريق التواصل معنا.}
+    \item \textarabic{\textbf{التحديث}: يمكنك تحديث تفضيلاتك، مثل اللغة أو المنطقة الزمنية، من خلال إعدادات الإضافة.}
+\end{itemize}
+
+% Changes to This Privacy Policy section in English
+\section{Changes to This Privacy Policy}
+We may update this Privacy Policy from time to time. Any changes will be reflected with an updated "Last Updated" date at the top of this document. We encourage you to review this policy periodically.
+
+% Changes to This Privacy Policy section in Arabic
+\section*{\textarabic{التغييرات على سياسة الخصوصية هذه}}
+\textarabic{قد نقوم بتحديث سياسة الخصوصية هذه من وقت لآخر. سيتم عكس أي تغييرات مع تاريخ "آخر تحديث" محدث في أعلى هذه الوثيقة. نحن نشجعك على مراجعة هذه السياسة بشكل دوري.}
+
+% Contact Us section in English
+\section{Contact Us}
+If you have any questions or concerns about this Privacy Policy, please contact us at: \\
+\textbf{Email}: support@flexreminder.com \\
+\textbf{Website}: https://flexreminder.com
+
+% Contact Us section in Arabic
+\section*{\textarabic{تواصلوا معنا}}
+\textarabic{إذا كانت لديكم أي أسئلة أو مخاوف بشأن سياسة الخصوصية هذه، يرجى التواصل معنا عبر:} \\
+\textarabic{\textbf{البريد الإلكتروني}: support@flexreminder.com} \\
+\textarabic{\textbf{الموقع الإلكتروني}: https://flexreminder.com}
+
+\end{document}

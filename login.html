@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bookmark Reminder - Login</title>
+  <link href="vendor/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-white font-sans flex items-center justify-center h-screen">
+  <div id="login-screen" class="screen flex items-center justify-center relative">
+    <!-- Language Switcher -->
+    <div class="absolute top-4 right-4">
+      <button id="language-toggle-btn" class="focus:outline-none focus:ring-0 bg-black p-1 hover:bg-black rounded-full">
+        <svg class="w-6 h-6 text-white bg-black hover:bg-black" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.5 14H15M5 19h5m4-10h7m-7 4h7M3 9h5m-5 4h5m9-2v2m-3-6h3M9 19v2"></path>
+        </svg>
+      </button>
+      <div id="language-dropdown" class="hidden absolute right-0 mt-2 w-32 bg-black border border-gray-700 rounded-lg shadow-lg z-10">
+        <button id="lang-en" class="block w-full bg-black text-left px-4 py-2 text-white hover:bg-gray-800" data-lang="en">English</button>
+        <button id="lang-ar" class="block w-full bg-black text-left px-4 py-2 text-white hover:bg-gray-800" data-lang="ar">العربية</button>
+      </div>
+    </div>
+    <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
+      <div id="message-bar" class="hidden mb-4 p-3 rounded-lg text-center text-white transition-opacity duration-300">
+        <span id="message-text"></span>
+      </div>
+      <h2 id="form-title" class="text-2xl font-bold text-center text-black mb-6" data-i18n="login"></h2>
+      <form id="login-form" class="space-y-4">
+        <input type="email" id="email-input" placeholder="Email" required class="w-full p-3 border border-black rounded-lg focus:outline-none focus:ring-2 focus:ring-black" data-i18n-placeholder="email">
+        <input type="password" id="password-input" placeholder="Password" required class="w-full p-3 border border-black rounded-lg focus:outline-none focus:ring-2 focus:ring-black" data-i18n-placeholder="password">
+        <button type="button" id="submit-btn" class="w-full bg-black text-white p-3 rounded-lg hover:bg-gray-800 transition" data-i18n="loginBtn"></button>
+        <p id="forgot-password-btn" class="text-center text-black cursor-pointer hover:underline mb-2" data-i18n="forgotPassword"></p>
+        <p id="switch-to-register" class="text-center text-black cursor-pointer hover:underline" data-i18n="switchToRegister"></p>
+      </form>
+    </div>
+  </div>
+  <script src="i18n.js"></script>
+  <script src="utils.js"></script>
+  <script src="login.js"></script>
+</body>
+</html>

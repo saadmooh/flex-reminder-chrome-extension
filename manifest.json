@@ -1,0 +1,54 @@
+{
+  "manifest_version": 3,
+  "name": "Flex Reminder",
+  "version": "1.2",
+  "description": "A browser extension to manage bookmarks with smart reminders",
+  "permissions": [
+    "storage",
+    "notifications",
+    "alarms",
+    "tabs",
+      "https://flexreminder.com/*"
+  ],
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": "icon128.png",
+    "default_title": "Flex Reminder"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "128": "icon128.png"
+  },
+ 
+"host_permissions": [
+    "https://flexreminder.com/*"
+],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "time_slots.html",
+        "popup.html",
+        "reminders.html",
+        "reminders.js",
+        "edit-post.html",
+        "edit-post.js",
+        "styles.css",
+
+        "utils.js",
+        "i18n.js",
+        "popup.js",
+        "index.html",
+        "subscriptions.html",
+        "save_post.html",
+        "login.html",
+        "register.html",
+        "icon128.png",
+        "vendor/tailwind.min.css"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ]
+ 
+}

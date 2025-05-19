@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="manageSubscriptions"></title>
+  <link href="vendor/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-white font-sans min-h-screen">
+  <div id="subscriptions-screen" class="screen p-6">
+    <h2 class="text-2xl font-bold text-black mb-4" data-i18n="manageSubscriptions"></h2>
+    <button id="back-btn" class="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition mb-4" data-i18n="back"></button>
+    <div class="status-section">
+      <h3 class="text-xl font-bold text-black mb-2" data-i18n="subscriptionStatus"></h3>
+      <div id="status-message" class="status-message"></div>
+    </div>
+    <div class="current-subscription hidden">
+      <h3 class="text-xl font-bold text-black mb-2" data-i18n="currentSubscription"></h3>
+      <div id="current-subscription-card" class="plan-card"></div>
+    </div>
+    <div class="available-plans">
+      <h3 class="text-xl font-bold text-black mb-2" data-i18n="availablePlans"></h3>
+      <div id="plans-list"></div>
+    </div>
+    <button id="manage-subscription-btn" class="manage-subscription-btn hidden bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition mt-4" data-i18n="manageSubscriptions"></button>
+  </div>
+  <script src="i18n.js"></script>
+  <script src="utils.js"></script>
+  <script src="subscriptions.js"></script>
+</body>
+</html>
