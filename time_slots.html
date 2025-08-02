@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="" dir="">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="freeTimes"></title>
+  <link href="vendor/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="time_slots_style.css">
+</head>
+<body class="bg-white font-sans min-h-screen">
+  <div id="time-slots-screen" class="screen p-6">
+    <div id="message-bar" class="fixed top-0 left-0 right-0 p-4 text-white text-center hidden z-50"></div>
+    <!-- Back Arrow Button -->
+    <button id="back-btn" class="mb-4 bg-white border-none focus:outline-none focus:ring-0 hover:bg-white" data-i18n-tooltip="back">
+      <svg class="w-6 h-6 bg-white" fill="none" stroke="black" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+      </svg>
+    </button>
+    <h2 class="text-2xl font-bold text-black mb-4" data-i18n="freeTimes"></h2>
+    <div id="time-slots-list" class="w-full"></div>
+    <button id="add-free-time-btn" class="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition mt-4" data-i18n="addFreeTime"></button>
+  </div>
+  <script src="i18n.js"></script>
+  <script src="utils.js"></script>
+  <script src="time_slots.js"></script>
+</body>
+</html>

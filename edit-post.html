@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="editReminder"></title>
+  <link href="vendor/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Custom styles for message bar animation */
+    #message-bar {
+      transition: opacity 0.5s ease-in-out;
+    }
+    #message-bar.hidden {
+      opacity: 0;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex items-center justify-center bg-gray-100">
+  <div id="message-bar" class="fixed top-0 left-0 right-0 p-4 text-white text-center hidden z-50"></div>
+  <div id="edit-post-screen" class="screen p-6 bg-white rounded-lg shadow-lg w-full max-w-md">
+    <h2 class="text-2xl font-bold text-black mb-4" data-i18n="editReminder"></h2>
+    <form id="edit-post-form" class="space-y-4">
+      <input type="url" id="edit-url" required disabled class="w-full p-3 border border-gray-300 rounded-lg bg-gray-100 focus:outline-none focus:ring-2 focus:ring-black" data-i18n-placeholder="url">
+      <div id="edit-toggle" class="flex space-x-2">
+        <button type="button" id="edit-importance-btn" class="flex-1 bg-black text-white p-3 rounded-lg hover:bg-gray-800 transition" data-i18n="editImportance"></button>
+        <button type="button" id="edit-time-btn" class="flex-1 bg-black text-white p-3 rounded-lg hover:bg-gray-800 transition" data-i18n="editNextReminderTime"></button>
+      </div>
+      <select id="edit-importance" class="w-full p-3 border border-gray-300 rounded-lg hidden focus:outline-none focus:ring-2 focus:ring-black">
+        <option value="day" data-i18n="day"></option>
+        <option value="week" data-i18n="week"></option>
+        <option value="month" data-i18n="month"></option>
+      </select>
+      <div id="edit-time" class="hidden">
+        <input type="datetime-local" id="edit-next-time" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-black" data-i18n-placeholder="nextReminderTime">
+        <p class="text-sm text-gray-500 mt-1" data-i18n="futureTimeOnly"></p>
+      </div>
+      <div class="flex space-x-2">
+        <button type="submit" id="update-btn" disabled class="flex-1 bg-black text-white p-3 rounded-lg opacity-50 cursor-not-allowed hover:bg-gray-800 transition" data-i18n="update"></button>
+        <button type="button" id="cancel-edit" class="flex-1 bg-white text-black border border-gray-300 p-3 rounded-lg hover:bg-gray-200 transition" data-i18n="cancel"></button>
+      </div>
+    </form>
+  </div>
+  <script src="i18n.js"></script>
+  <script src="utils.js"></script>
+  <script src="edit-post.js"></script>
+</body>
+</html>
